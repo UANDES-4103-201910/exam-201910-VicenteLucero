@@ -1,0 +1,24 @@
+<body class="bg">
+  <header class="navbar navbar-top">
+    <div class="container">
+      <h1>
+        <div class="title" href="/"><%= link_to "Z-Mobile", root_path %></div>
+      </h1>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Handsets", root_path %></li>
+          <li><%= link_to "Prepay Options", root_path %></li>
+          <li><%= link_to "Subscriptions", root_path %></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+              <li><%= link_to link_to('Logout', destroy_user_session_path, method: :delete) %></li>
+              <li><%= link_to current_user.email, users_path(current_user.id) %></li>
+          <% else %>
+              <li><%= link_to "Log in", new_user_session_path %></li>
+          <%end %>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</body>

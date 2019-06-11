@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Exam2019</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title><%= content_for?(:title) ?yield(:title) : "Z-Mobile" %></title>
+
+    <%= render 'layouts/header'%>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="container">
+      <%= render 'layouts/sidebar' %>
+      <%= yield %>
+    </div>
+
+
   </body>
 </html>

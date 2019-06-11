@@ -13,3 +13,86 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstap";
+
+
+
+.footer-margin {
+    height: 100px;
+}
+
+.navbar-top{
+    background: rgba(75, 148, 216,.9)
+}
+
+a.title {
+    text-align: center;
+    color: rgb(0,0,0);
+}
+
+a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.bg{
+    background-color: orange;
+    height:100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+h1{
+    text-aling: center;
+    color: rgb(0,0,0);
+}
+
+.main{
+    height: 100%;
+    margin: 250px;
+}
+
+body, html{
+    height: 100%;
+    margin: 0;
+}
+
+#mySidenav {
+    width: 150px;
+    margin-top: 240px;
+}
+
+.sidenav{
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: darkolivegreen;
+    padding-top: 100px;
+    border: 3px solid black;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column1 {
+    float: left;
+    width:30%;
+    padding: 20px;
+    heigth: 300px;
+}
+
+.column2 {
+    float: left;
+    width: 70%;
+    padding: 10px;
+    height: 300px;
+}

@@ -1,0 +1,21 @@
+<body>
+  <div class="main">
+    <div class="card border-0 shadow mb-4" style="background-color: white">
+      <h1 id="currentTitle">All our Products</h1>
+
+      <% @products.each do |p| %>
+        <div>
+          <div class="card border-0 shadow mb-4" style="background-color: white">
+            <h3><%= link_to p.model, p %></h3>
+            <div class="column1">
+              <p>Brand: <%= p.brand %></p>
+              <p>Variant: <%= p.variant %></p>
+              <p> Price: <%= p.price %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</body>
